@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center - Colit</title>
+    
+    <link rel="icon" type="image/png" href="icon_im-removebg-preview (2).png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        background: '#030303',
+                        surface: '#0A0A0A',
+                        surfaceHighlight: '#121212',
+                        border: '#1F1F1F',
+                        primary: '#584bf8',
+                        primaryGlow: 'rgba(88, 75, 248, 0.5)',
+                    },
+                    animation: {
+                        'float': 'float 4s ease-in-out infinite',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #030303;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Glass Utility */
+        .glass {
+            background: rgba(255, 255, 255, 0.05); 
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+        }
+
+        /* Warning Glass (Red Tint) */
+        .glass-warning {
+            background: rgba(239, 68, 68, 0.05); 
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+        }
+
+        /* Success Glass (Green Tint) */
+        .glass-success {
+            background: rgba(16, 185, 129, 0.05); 
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        /* Softlight Background */
+        .hero-softlight {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: -1;
+            background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(88, 75, 248, 0.25), transparent 70%);
+            mix-blend-mode: overlay;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #030303; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #584bf8; }
+    </style>
+</head>
+<body class="antialiased selection:bg-primary selection:text-white">
+
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div id="glow1" class="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-primary/10 rounded-full blur-[120px]"></div>
+        <div id="glow2" class="absolute bottom-[-10%] right-[-10%] w-[40vw] h-[40vw] bg-purple-900/10 rounded-full blur-[100px]"></div>
+    </div>
+
+    <nav class="fixed top-0 w-full z-50 transition-all duration-300 py-4" id="navbar">
+        <div class="container mx-auto px-6">
+            <div class="glass rounded-full px-6 py-3 flex justify-between items-center max-w-4xl mx-auto">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="icon_im-removebg-preview (2).png" alt="Colit Logo" class="w-8 h-8 object-contain transition-transform group-hover:rotate-12">
+                    <span class="font-display font-bold text-lg tracking-tight">Colit</span>
+                </a>
+                
+                <div class="hidden md:flex items-center gap-12 text-sm font-medium text-gray-300">
+                    <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                    <a href="index.html#features" class="hover:text-white transition-colors">Features</a>
+                    <a href="index.html#reviews" class="hover:text-white transition-colors">Reviews</a>
+                    <a href="#" class="text-white font-semibold">Help</a>
+                </div>
+
+                <a href="https://github.com/user-attachments/files/24420528/colit_installer.zip" class="bg-white text-black px-5 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform">
+                    Download
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="relative z-10 pt-40 pb-20">
+        <div class="hero-softlight"></div>
+
+        <div class="container mx-auto px-6 mb-20 text-center max-w-3xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs text-primary font-medium mb-6">
+                Support Center
+            </div>
+            <h1 class="font-display text-4xl md:text-6xl font-bold tracking-tighter mb-6">
+                Troubleshooting & <br /> <span class="text-gray-400">Installation Guide</span>
+            </h1>
+            <p class="text-gray-400 text-lg">
+                Because Colit is an open-source tool, Windows might be extra cautious when you install it. Here is how to get started in seconds.
+            </p>
+        </div>
+
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <div class="glass-warning rounded-3xl p-8 relative overflow-hidden">
+                    <div class="flex items-start gap-4 mb-6">
+                        <div class="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center text-red-500 flex-shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">"Windows protected your PC"</h3>
+                            <p class="text-gray-400 text-sm">You might see a blue window popup saying Windows SmartScreen prevented an unrecognized app from starting.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-black/30 rounded-xl p-5 border border-white/5">
+                        <h4 class="text-sm font-semibold text-white mb-3 uppercase tracking-wider">Solution:</h4>
+                        <ol class="list-decimal list-inside text-sm text-gray-300 space-y-2">
+                            <li>Click the underlined <strong>"More info"</strong> text.</li>
+                            <li>A new button will appear at the bottom.</li>
+                            <li>Click <strong>"Run anyway"</strong>.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="glass rounded-3xl p-8 relative overflow-hidden">
+                    <div class="flex items-start gap-4 mb-6">
+                        <div class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-500 flex-shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Installation Error</h3>
+                            <p class="text-gray-400 text-sm">If the app doesn't open or shows missing file errors, you might be trying to run it inside the ZIP file.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-black/30 rounded-xl p-5 border border-white/5">
+                        <h4 class="text-sm font-semibold text-white mb-3 uppercase tracking-wider">Solution:</h4>
+                        <ol class="list-decimal list-inside text-sm text-gray-300 space-y-2">
+                            <li>Right-click the <strong>colit_installer.zip</strong> file.</li>
+                            <li>Select <strong>"Extract All..."</strong>.</li>
+                            <li>Open the extracted folder and run <strong>Colit.exe</strong>.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="md:col-span-2 glass-success rounded-3xl p-8">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-500 text-sm">✓</span>
+                        Standard Installation Guide
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-black/20 p-4 rounded-xl border border-white/5">
+                            <div class="text-emerald-500 font-bold mb-2">Step 01</div>
+                            <p class="text-sm text-gray-300">Click the "Download" button to get the latest <strong>.zip</strong> file from GitHub.</p>
+                        </div>
+                        <div class="bg-black/20 p-4 rounded-xl border border-white/5">
+                            <div class="text-emerald-500 font-bold mb-2">Step 02</div>
+                            <p class="text-sm text-gray-300">Locate the file in your Downloads folder and <strong>Extract</strong> it completely.</p>
+                        </div>
+                        <div class="bg-black/20 p-4 rounded-xl border border-white/5">
+                            <div class="text-emerald-500 font-bold mb-2">Step 03</div>
+                            <p class="text-sm text-gray-300">Launch <strong>Colit.exe</strong>. If prompted by Windows, choose "Run Anyway".</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-20 text-center">
+                <p class="text-gray-400 mb-6">Still facing issues? We are here to help.</p>
+                <a href="https://github.com/qaddu/colit-issues/blob/main/.github/ISSUE_TEMPLATE/issue-related-to-downloading.md" target="_blank" class="inline-flex items-center gap-2 text-white border-b border-primary hover:text-primary transition-colors pb-1">
+                    Open an Issue on GitHub
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="relative z-10 py-12 border-t border-white/5 bg-black">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center gap-2 mb-4 md:mb-0">
+                <img src="icon_im-removebg-preview (2).png" alt="Colit Logo" class="w-6 h-6 grayscale opacity-30">
+                <span class="text-gray-600 font-bold text-sm">Colit &copy; 2026</span>
+            </div>
+            
+            <div class="flex gap-6 text-sm text-gray-600">
+               <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                <a href="https://github.com/user-attachments/files/24420528/colit_installer.zip" id="download-btn" class="hover:text-white transition-colors">Download</a>
+                <a href="https://github.com/qaddu/colit-issues/tree/main/.github/ISSUE_TEMPLATE" class="hover:text-white transition-colors">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple blob movement logic
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            const glow1 = document.getElementById('glow1');
+            const glow2 = document.getElementById('glow2');
+            
+            if(glow1) glow1.style.transform = `translateY(${scrolled * 0.2}px)`;
+            if(glow2) glow2.style.transform = `translateY(${scrolled * -0.1}px)`;
+        });
+    </script>
+</body>
+</html>

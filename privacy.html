@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Colit</title>
+    
+    <link rel="icon" type="image/png" href="icon_im-removebg-preview (2).png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        background: '#030303',
+                        surface: '#0A0A0A',
+                        surfaceHighlight: '#121212',
+                        border: '#1F1F1F',
+                        primary: '#584bf8',
+                        primaryGlow: 'rgba(88, 75, 248, 0.5)',
+                    },
+                    animation: {
+                        'float': 'float 4s ease-in-out infinite',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #030303;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Glass Utility */
+        .glass {
+            background: rgba(255, 255, 255, 0.05); 
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+        }
+
+        /* Softlight Background */
+        .hero-softlight {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: -1;
+            background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(88, 75, 248, 0.25), transparent 70%);
+            mix-blend-mode: overlay;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #030303; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #584bf8; }
+    </style>
+</head>
+<body class="antialiased selection:bg-primary selection:text-white">
+
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div id="glow1" class="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-primary/10 rounded-full blur-[120px]"></div>
+        <div id="glow2" class="absolute bottom-[-10%] right-[-10%] w-[40vw] h-[40vw] bg-purple-900/10 rounded-full blur-[100px]"></div>
+    </div>
+
+    <nav class="fixed top-0 w-full z-50 transition-all duration-300 py-4" id="navbar">
+        <div class="container mx-auto px-6">
+            <div class="glass rounded-full px-6 py-3 flex justify-between items-center max-w-4xl mx-auto">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="icon_im-removebg-preview (2).png" alt="Colit Logo" class="w-8 h-8 object-contain transition-transform group-hover:rotate-12">
+                    <span class="font-display font-bold text-lg tracking-tight">Colit</span>
+                </a>
+                
+                <div class="hidden md:flex items-center gap-12 text-sm font-medium text-gray-300">
+                    <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                    <a href="index.html#features" class="hover:text-white transition-colors">Features</a>
+                    <a href="index.html#reviews" class="hover:text-white transition-colors">Reviews</a>
+                    <a href="help.html" class="hover:text-white transition-colors">Help</a>
+                </div>
+
+                <a href="https://github.com/user-attachments/files/24420528/colit_installer.zip" class="bg-white text-black px-5 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform" id="download-btn">
+                    Download
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="relative z-10 pt-40 pb-20">
+        <div class="hero-softlight"></div>
+
+        <div class="container mx-auto px-6 mb-16 text-center max-w-3xl">
+            <h1 class="font-display text-4xl md:text-5xl font-bold tracking-tighter mb-4">
+                Privacy Policy
+            </h1>
+            <p class="text-gray-400">
+                Last Updated: January 2026
+            </p>
+        </div>
+
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="glass rounded-3xl p-8 md:p-12">
+                
+                <div class="mb-10">
+                    <h2 class="text-2xl font-display font-bold text-white mb-4">1. No Personal Data Collection</h2>
+                    <p class="text-gray-400 leading-relaxed mb-4">
+                        Colit is designed with your privacy as the top priority. We do not collect your name, email, phone number, or location. We do not have access to the notes, code snippets, tasks, or study schedules you create within the app.
+                    </p>
+                    <div class="bg-primary/10 border border-primary/20 rounded-lg p-4 text-sm text-primary">
+                        <strong>No Account Required:</strong> You do not need to create an account or log in to use Colit.
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h2 class="text-2xl font-display font-bold text-white mb-4">2. Your Data Stays on Your Device</h2>
+                    <p class="text-gray-400 leading-relaxed mb-4">
+                        All the content you create in Colit (such as your knowledge base, deep work timers, and analytics data) is stored locally on your computer.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-400 space-y-2 ml-2">
+                        <li>This data never leaves your device.</li>
+                        <li>We do not have servers that store your personal content.</li>
+                        <li>If you uninstall Colit or clear your device storage, this data may be deleted permanently because we do not have a backup copy.</li>
+                    </ul>
+                </div>
+
+                <div class="mb-10">
+                    <h2 class="text-2xl font-display font-bold text-white mb-4">3. Anonymous Technical Usage Data</h2>
+                    <p class="text-gray-400 leading-relaxed mb-4">
+                        To help us maintain the app and fix bugs, we use a tool called PostHog.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-black/20 p-4 rounded-xl border border-white/5">
+                            <h4 class="text-white font-semibold mb-2">What it collects</h4>
+                            <p class="text-sm text-gray-400">It sends us anonymous signals when technical events happen, such as "App Installed," "Update Successful," or "Timer Started."</p>
+                        </div>
+                        <div class="bg-black/20 p-4 rounded-xl border border-white/5">
+                            <h4 class="text-white font-semibold mb-2">What it DOES NOT collect</h4>
+                            <p class="text-sm text-gray-400">It never sees what you type in your notes, your specific tasks, or any personally identifiable information.</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-500 text-sm mt-4 italic">This data is used solely to improve software performance and stability.</p>
+                </div>
+
+                <div class="mb-10">
+                    <h2 class="text-2xl font-display font-bold text-white mb-4">4. Third-Party Services</h2>
+                    <p class="text-gray-400 leading-relaxed">
+                        We use GitHub to distribute the application installer. When you download Colit from GitHub, their system may log basic download statistics (like a count of how many times the file was downloaded).
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-display font-bold text-white mb-4">5. Contact</h2>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        If you have questions about this policy, you can contact the developer at:
+                    </p>
+                    <div class="flex flex-col gap-3">
+                        <a href="https://github.com/qaddu/colit-issues/blob/main/.github/ISSUE_TEMPLATE/issue-related-to-privacy-policy-.md" target="_blank" class="flex items-center gap-3 text-white hover:text-primary transition-colors group">
+                            <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </div>
+                            <span>Open a Policy Issue on GitHub</span>
+                        </a>
+                        
+                        <a href="mailto:sphere.ct.ws@gmail.com" class="flex items-center gap-3 text-white hover:text-primary transition-colors group">
+                            <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <span>sphere.ct.ws@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="relative z-10 py-12 border-t border-white/5 bg-black">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center gap-2 mb-4 md:mb-0">
+                <img src="icon_im-removebg-preview (2).png" alt="Colit Logo" class="w-6 h-6 grayscale opacity-30">
+                <span class="text-gray-600 font-bold text-sm">Colit &copy; 2026</span>
+            </div>
+            
+            <div class="flex gap-6 text-sm text-gray-600">
+                <a href="#" class="text-white">Privacy Policy</a>
+                <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                <a href="services.html" class="hover:text-white transition-colors">Terms of Services</a>
+                <a href="https://github.com/qaddu/colit-issues/tree/main/.github/ISSUE_TEMPLATE" class="hover:text-white transition-colors">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            const glow1 = document.getElementById('glow1');
+            const glow2 = document.getElementById('glow2');
+            
+            if(glow1) glow1.style.transform = `translateY(${scrolled * 0.2}px)`;
+            if(glow2) glow2.style.transform = `translateY(${scrolled * -0.1}px)`;
+        });
+    </script>
+</body>
+</html>
